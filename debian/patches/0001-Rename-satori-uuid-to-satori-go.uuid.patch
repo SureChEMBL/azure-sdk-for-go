@@ -1,0 +1,275 @@
+From: Shengjing Zhu <i@zhsj.me>
+Date: Thu, 17 Aug 2017 14:33:42 +0800
+Subject: Rename satori/uuid to satori/go.uuid
+
+Forwarded: not-needed
+Signed-off-by: Shengjing Zhu <i@zhsj.me>
+---
+ arm/advisor/models.go                        | 2 +-
+ arm/advisor/recommendations.go               | 2 +-
+ arm/automation/dsccompilationjob.go          | 2 +-
+ arm/automation/job.go                        | 2 +-
+ arm/automation/jobschedule.go                | 2 +-
+ arm/automation/models.go                     | 2 +-
+ arm/commerce/models.go                       | 2 +-
+ arm/datalake-store/account/models.go         | 2 +-
+ arm/keyvault/models.go                       | 2 +-
+ arm/search/adminkeys.go                      | 2 +-
+ arm/search/querykeys.go                      | 2 +-
+ arm/search/services.go                       | 2 +-
+ arm/sql/models.go                            | 2 +-
+ arm/web/models.go                            | 2 +-
+ datalake-store/filesystem/filesystemgroup.go | 2 +-
+ storage/entity.go                            | 2 +-
+ storage/entity_test.go                       | 2 +-
+ storage/table_batch.go                       | 2 +-
+ storage/table_batch_test.go                  | 2 +-
+ 19 files changed, 19 insertions(+), 19 deletions(-)
+
+diff --git a/arm/advisor/models.go b/arm/advisor/models.go
+index 9b861c0..0945683 100755
+--- a/arm/advisor/models.go
++++ b/arm/advisor/models.go
+@@ -22,7 +22,7 @@ import (
+ 	"github.com/Azure/go-autorest/autorest"
+ 	"github.com/Azure/go-autorest/autorest/date"
+ 	"github.com/Azure/go-autorest/autorest/to"
+-	"github.com/satori/uuid"
++	uuid "github.com/satori/go.uuid"
+ 	"net/http"
+ )
+ 
+diff --git a/arm/advisor/recommendations.go b/arm/advisor/recommendations.go
+index beaa8e7..96dc3d9 100755
+--- a/arm/advisor/recommendations.go
++++ b/arm/advisor/recommendations.go
+@@ -21,7 +21,7 @@ package advisor
+ import (
+ 	"github.com/Azure/go-autorest/autorest"
+ 	"github.com/Azure/go-autorest/autorest/azure"
+-	"github.com/satori/uuid"
++	uuid "github.com/satori/go.uuid"
+ 	"net/http"
+ )
+ 
+diff --git a/arm/automation/dsccompilationjob.go b/arm/automation/dsccompilationjob.go
+index 15fe234..fb0d59d 100755
+--- a/arm/automation/dsccompilationjob.go
++++ b/arm/automation/dsccompilationjob.go
+@@ -22,7 +22,7 @@ import (
+ 	"github.com/Azure/go-autorest/autorest"
+ 	"github.com/Azure/go-autorest/autorest/azure"
+ 	"github.com/Azure/go-autorest/autorest/validation"
+-	"github.com/satori/uuid"
++	uuid "github.com/satori/go.uuid"
+ 	"net/http"
+ )
+ 
+diff --git a/arm/automation/job.go b/arm/automation/job.go
+index d1257ab..04950d6 100755
+--- a/arm/automation/job.go
++++ b/arm/automation/job.go
+@@ -22,7 +22,7 @@ import (
+ 	"github.com/Azure/go-autorest/autorest"
+ 	"github.com/Azure/go-autorest/autorest/azure"
+ 	"github.com/Azure/go-autorest/autorest/validation"
+-	"github.com/satori/uuid"
++	uuid "github.com/satori/go.uuid"
+ 	"net/http"
+ )
+ 
+diff --git a/arm/automation/jobschedule.go b/arm/automation/jobschedule.go
+index a10ec7d..f66f82d 100755
+--- a/arm/automation/jobschedule.go
++++ b/arm/automation/jobschedule.go
+@@ -22,7 +22,7 @@ import (
+ 	"github.com/Azure/go-autorest/autorest"
+ 	"github.com/Azure/go-autorest/autorest/azure"
+ 	"github.com/Azure/go-autorest/autorest/validation"
+-	"github.com/satori/uuid"
++	uuid "github.com/satori/go.uuid"
+ 	"net/http"
+ )
+ 
+diff --git a/arm/automation/models.go b/arm/automation/models.go
+index 9bba306..359e845 100755
+--- a/arm/automation/models.go
++++ b/arm/automation/models.go
+@@ -22,7 +22,7 @@ import (
+ 	"github.com/Azure/go-autorest/autorest"
+ 	"github.com/Azure/go-autorest/autorest/date"
+ 	"github.com/Azure/go-autorest/autorest/to"
+-	"github.com/satori/uuid"
++	uuid "github.com/satori/go.uuid"
+ 	"io"
+ 	"net/http"
+ )
+diff --git a/arm/commerce/models.go b/arm/commerce/models.go
+index 1497c45..aaddb2f 100755
+--- a/arm/commerce/models.go
++++ b/arm/commerce/models.go
+@@ -22,7 +22,7 @@ import (
+ 	"github.com/Azure/go-autorest/autorest"
+ 	"github.com/Azure/go-autorest/autorest/date"
+ 	"github.com/Azure/go-autorest/autorest/to"
+-	"github.com/satori/uuid"
++	uuid "github.com/satori/go.uuid"
+ 	"github.com/shopspring/decimal"
+ 	"net/http"
+ )
+diff --git a/arm/datalake-store/account/models.go b/arm/datalake-store/account/models.go
+index c70781f..ea98756 100755
+--- a/arm/datalake-store/account/models.go
++++ b/arm/datalake-store/account/models.go
+@@ -22,7 +22,7 @@ import (
+ 	"github.com/Azure/go-autorest/autorest"
+ 	"github.com/Azure/go-autorest/autorest/date"
+ 	"github.com/Azure/go-autorest/autorest/to"
+-	"github.com/satori/uuid"
++	uuid "github.com/satori/go.uuid"
+ 	"net/http"
+ )
+ 
+diff --git a/arm/keyvault/models.go b/arm/keyvault/models.go
+index b0162c4..724f4f5 100755
+--- a/arm/keyvault/models.go
++++ b/arm/keyvault/models.go
+@@ -21,7 +21,7 @@ package keyvault
+ import (
+ 	"github.com/Azure/go-autorest/autorest"
+ 	"github.com/Azure/go-autorest/autorest/to"
+-	"github.com/satori/uuid"
++	uuid "github.com/satori/go.uuid"
+ 	"net/http"
+ )
+ 
+diff --git a/arm/search/adminkeys.go b/arm/search/adminkeys.go
+index 1f53128..21d3968 100755
+--- a/arm/search/adminkeys.go
++++ b/arm/search/adminkeys.go
+@@ -21,7 +21,7 @@ package search
+ import (
+ 	"github.com/Azure/go-autorest/autorest"
+ 	"github.com/Azure/go-autorest/autorest/azure"
+-	"github.com/satori/uuid"
++	uuid "github.com/satori/go.uuid"
+ 	"net/http"
+ )
+ 
+diff --git a/arm/search/querykeys.go b/arm/search/querykeys.go
+index 087fd21..2793bff 100755
+--- a/arm/search/querykeys.go
++++ b/arm/search/querykeys.go
+@@ -21,7 +21,7 @@ package search
+ import (
+ 	"github.com/Azure/go-autorest/autorest"
+ 	"github.com/Azure/go-autorest/autorest/azure"
+-	"github.com/satori/uuid"
++	uuid "github.com/satori/go.uuid"
+ 	"net/http"
+ )
+ 
+diff --git a/arm/search/services.go b/arm/search/services.go
+index eaa4896..4ab4fa4 100755
+--- a/arm/search/services.go
++++ b/arm/search/services.go
+@@ -22,7 +22,7 @@ import (
+ 	"github.com/Azure/go-autorest/autorest"
+ 	"github.com/Azure/go-autorest/autorest/azure"
+ 	"github.com/Azure/go-autorest/autorest/validation"
+-	"github.com/satori/uuid"
++	uuid "github.com/satori/go.uuid"
+ 	"net/http"
+ )
+ 
+diff --git a/arm/sql/models.go b/arm/sql/models.go
+index 6f42dca..f68523e 100755
+--- a/arm/sql/models.go
++++ b/arm/sql/models.go
+@@ -21,7 +21,7 @@ package sql
+ import (
+ 	"github.com/Azure/go-autorest/autorest"
+ 	"github.com/Azure/go-autorest/autorest/date"
+-	"github.com/satori/uuid"
++	uuid "github.com/satori/go.uuid"
+ )
+ 
+ // AuthenticationType enumerates the values for authentication type.
+diff --git a/arm/web/models.go b/arm/web/models.go
+index 005ade8..b33e89d 100755
+--- a/arm/web/models.go
++++ b/arm/web/models.go
+@@ -22,7 +22,7 @@ import (
+ 	"github.com/Azure/go-autorest/autorest"
+ 	"github.com/Azure/go-autorest/autorest/date"
+ 	"github.com/Azure/go-autorest/autorest/to"
+-	"github.com/satori/uuid"
++	uuid "github.com/satori/go.uuid"
+ 	"io"
+ 	"net/http"
+ )
+diff --git a/datalake-store/filesystem/filesystemgroup.go b/datalake-store/filesystem/filesystemgroup.go
+index a7f559c..1f7c2e1 100755
+--- a/datalake-store/filesystem/filesystemgroup.go
++++ b/datalake-store/filesystem/filesystemgroup.go
+@@ -22,7 +22,7 @@ import (
+ 	"github.com/Azure/go-autorest/autorest"
+ 	"github.com/Azure/go-autorest/autorest/azure"
+ 	"github.com/Azure/go-autorest/autorest/validation"
+-	"github.com/satori/uuid"
++	uuid "github.com/satori/go.uuid"
+ 	"io"
+ 	"net/http"
+ )
+diff --git a/storage/entity.go b/storage/entity.go
+index 13e9475..96351e2 100644
+--- a/storage/entity.go
++++ b/storage/entity.go
+@@ -12,7 +12,7 @@ import (
+ 	"strings"
+ 	"time"
+ 
+-	"github.com/satori/uuid"
++	uuid "github.com/satori/go.uuid"
+ )
+ 
+ // Annotating as secure for gas scanning
+diff --git a/storage/entity_test.go b/storage/entity_test.go
+index 22f95bd..89c9660 100644
+--- a/storage/entity_test.go
++++ b/storage/entity_test.go
+@@ -6,7 +6,7 @@ import (
+ 	"strings"
+ 	"time"
+ 
+-	"github.com/satori/uuid"
++	uuid "github.com/satori/go.uuid"
+ 	chk "gopkg.in/check.v1"
+ )
+ 
+diff --git a/storage/table_batch.go b/storage/table_batch.go
+index 7a0f091..d8f02c6 100644
+--- a/storage/table_batch.go
++++ b/storage/table_batch.go
+@@ -12,7 +12,7 @@ import (
+ 	"sort"
+ 	"strings"
+ 
+-	"github.com/satori/uuid"
++	uuid "github.com/satori/go.uuid"
+ )
+ 
+ // Operation type. Insert, Delete, Replace etc.
+diff --git a/storage/table_batch_test.go b/storage/table_batch_test.go
+index 7bf6c51..54d2ebc 100644
+--- a/storage/table_batch_test.go
++++ b/storage/table_batch_test.go
+@@ -5,7 +5,7 @@ package storage
+ import (
+ 	"time"
+ 
+-	"github.com/satori/uuid"
++	uuid "github.com/satori/go.uuid"
+ 	chk "gopkg.in/check.v1"
+ )
+ 

@@ -1,0 +1,35 @@
+Source: golang-github-azure-azure-sdk-for-go
+Section: devel
+Priority: optional
+Maintainer: Debian Go Packaging Team <pkg-go-maintainers@lists.alioth.debian.org>
+Uploaders: Martín Ferrari <tincho@debian.org>,
+           Tianon Gravi <tianon@debian.org>,
+Build-Depends: debhelper (>= 9),
+               dh-golang,
+               golang-any,
+               golang-github-azure-go-autorest-dev (>= 8.2.0),
+               golang-github-satori-go.uuid-dev,
+               golang-github-shopspring-decimal-dev,
+               golang-golang-x-crypto-dev,
+               golang-gopkg-check.v1-dev,
+Standards-Version: 4.1.0
+Homepage: https://github.com/Azure/azure-sdk-for-go
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-go/packages/golang-github-azure-azure-sdk-for-go.git
+Vcs-Git: https://anonscm.debian.org/git/pkg-go/packages/golang-github-azure-azure-sdk-for-go.git
+XS-Go-Import-Path: github.com/Azure/azure-sdk-for-go
+Testsuite: autopkgtest-pkg-go
+
+Package: golang-github-azure-azure-sdk-for-go-dev
+Architecture: all
+Depends: golang-github-azure-go-autorest-dev (>= 8.2.0),
+         golang-github-satori-go.uuid-dev,
+         golang-github-shopspring-decimal-dev,
+         golang-golang-x-crypto-dev,
+         ${misc:Depends},
+         ${shlibs:Depends},
+Description: Microsoft Azure SDK for Go
+ This project provides various Go packages to perform operations on Microsoft
+ Azure REST APIs.
+ .
+ See list of implemented API clients here
+ (http://godoc.org/github.com/Azure/azure-sdk-for-go).

@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+
+export DH_GOLANG_EXCLUDES := Gododir
+
+override_dh_auto_test: DH_GOLANG_EXCLUDES += storage
+override_dh_auto_test:
+	# storage needs "ACCOUNT_NAME" to test against remote services
+	dh_auto_test
+
+%:
+	dh $@ --buildsystem=golang --with=golang
+
+override_dh_auto_install:
+	dh_auto_install -- --no-binaries
